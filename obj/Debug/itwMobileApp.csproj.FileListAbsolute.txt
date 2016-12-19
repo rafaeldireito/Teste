@@ -1,0 +1,15 @@
+C:\Users\Joaquim Sousa Pinto\documents\visual studio 2013\Projects\ITW-Projeto 1\itwMobileApp\bin\itwMobileApp.dll.config
+C:\Users\Joaquim Sousa Pinto\documents\visual studio 2013\Projects\ITW-Projeto 1\itwMobileApp\bin\itwMobileApp.dll
+C:\Users\Joaquim Sousa Pinto\documents\visual studio 2013\Projects\ITW-Projeto 1\itwMobileApp\bin\itwMobileApp.pdb
+C:\Users\Joaquim Sousa Pinto\documents\visual studio 2013\Projects\ITW-Projeto 1\itwMobileApp\bin\Antlr3.Runtime.dll
+C:\Users\Joaquim Sousa Pinto\documents\visual studio 2013\Projects\ITW-Projeto 1\itwMobileApp\bin\Microsoft.Web.Infrastructure.dll
+C:\Users\Joaquim Sousa Pinto\documents\visual studio 2013\Projects\ITW-Projeto 1\itwMobileApp\bin\Newtonsoft.Json.dll
+C:\Users\Joaquim Sousa Pinto\documents\visual studio 2013\Projects\ITW-Projeto 1\itwMobileApp\bin\System.Web.Optimization.dll
+C:\Users\Joaquim Sousa Pinto\documents\visual studio 2013\Projects\ITW-Projeto 1\itwMobileApp\bin\WebActivator.dll
+C:\Users\Joaquim Sousa Pinto\documents\visual studio 2013\Projects\ITW-Projeto 1\itwMobileApp\bin\WebGrease.dll
+C:\Users\Joaquim Sousa Pinto\documents\visual studio 2013\Projects\ITW-Projeto 1\itwMobileApp\bin\Antlr3.Runtime.pdb
+C:\Users\Joaquim Sousa Pinto\documents\visual studio 2013\Projects\ITW-Projeto 1\itwMobileApp\bin\Newtonsoft.Json.xml
+C:\Users\Joaquim Sousa Pinto\documents\visual studio 2013\Projects\ITW-Projeto 1\itwMobileApp\bin\System.Web.Optimization.xml
+C:\Users\Joaquim Sousa Pinto\documents\visual studio 2013\Projects\ITW-Projeto 1\itwMobileApp\obj\Debug\itwMobileApp.csprojResolveAssemblyReference.cache
+C:\Users\Joaquim Sousa Pinto\documents\visual studio 2013\Projects\ITW-Projeto 1\itwMobileApp\obj\Debug\itwMobileApp.dll
+C:\Users\Joaquim Sousa Pinto\documents\visual studio 2013\Projects\ITW-Projeto 1\itwMobileApp\obj\Debug\itwMobileApp.pdb
