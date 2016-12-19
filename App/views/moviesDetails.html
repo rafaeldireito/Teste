@@ -1,0 +1,130 @@
+<section>
+    <div class="container">
+        <div class="col-lg-12 col-md-12 col-xs-12"  data-bind="foreach: movieInfo">
+            <div class="col-lg-10 col-md-10 col-xs-12 col-lg-offset-1 col-md-offset-1 col-xs-offset-0" style="background-color:#1C1C1C; border-radius:15px;height:50px;color:white;
+             margin-top:30px;margin-bottom:10px; font-size:22px; font-weight:bold; text-align:center; line-height:50px;
+             font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif"
+                 data-bind="text: movie_title"></div>
+
+            <div class="col-lg-10 col-md-10 col-xs-12 col-lg-offset-1 col-md-offset-1">
+                <br />
+                <div style="margin-top:5px" class="col-lg-7 col-md-7 col-xs-12">
+                    <hr />
+                    <span class="titulos col-lg-4 col-md-4 col-xs-4 " style="margin:0px"> Title:</span>
+                    <span class="detahes" data-bind="text: movie_title"></span>
+                    <hr />
+                    <span class="titulos col-lg-4 col-md-4 col-xs-4">Duration:</span>
+                    <span class="detahes" data-bind="text: duration+' minutes'"></span>
+                    <hr />
+                    <span class="titulos col-lg-4 col-md-4 col-xs-4">Year:</span>
+                    <span class="detahes" data-bind="text: (title_year == null ? 'N/A' : title_year)"></span>
+                    <hr />
+                    <span class="titulos col-lg-4 col-md-4 col-xs-4">Cast:</span>
+                    <span class="detahes  col-lg-8 col-md-8 col-xs-8" data-bind="foreach: movie_actors"><a data-bind="attr: {href : '#atoresDetails/'+actorID},text: actorName+' , '"></a></span>
+                    <span class="detahes" style="font-weight:bold">&nbsp</span>
+                    <hr /> 
+                    <span class="titulos col-lg-4 col-md-4 col-xs-4">Director:</span>
+                    <span class="detahes"> <a data-bind="attr: {href : '#diretoresDetails/'+directorID},text: (directorName == null ? 'N/A' : directorName)"></a></span>
+                    <hr />
+                    <span class="titulos col-lg-4 col-md-4 col-xs-4">Language:</span>
+                    <span class="detahes col-lg-8 col-md-8 col-xs-8" ><a data-bind="attr: {href : '#languagesDetails/'+languageID},text: languageName"></a></span>
+                    <hr />
+                </div>
+                <div class="col-lg-4 col-md-4 col-xs-12" style="text-align:center">
+                    <center><img data-bind="attr: {src : (poster == '/images/noposter.png' ? 'http://www.kalahandi.info/wp-content/uploads/2016/05/sorry-image-not-available.png' : poster)}" style="border-radius:25px; width:100%;" /></center>
+                </div>
+            </div>
+        <div class="col-lg-10 col-md-10 col-xs-12 col-lg-offset-1 col-md-offset-1" style="background-color:lightgrey; border-radius:15px;height:40px;
+             margin-top:30px;margin-bottom:40px; font-size:22px; font-weight:bold; text-align:center; line-height:40px;
+             font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif">Movie Information
+            </div>
+            <div class="col-lg-10 col-md-10 col-xs-12 col-lg-offset-1 col-md-offset-1">
+                <table class="table table-striped">
+                    <tbody>
+                        <tr>
+                            <td class="titulos col-lg-4 col-md-4 col-xs-4 titulos" style="text-align:center">Country:</td>
+                            <td class="detahes"><a data-bind="attr: {href : '#countriesDetails/'+countryID},text: countryName"></a></td>
+                        </tr>
+                        <tr>
+                            <td class="titulos col-lg-4 col-md-4 col-xs-4" style="text-align:center">Genres:</td>
+                            <td class="detahes" data-bind="foreach: genres"><span data-bind="text: genreName+'&nbsp'+'|' + '&nbsp'"></span></td>
+                        </tr>
+                        <tr>
+                            <td class="titulos col-lg-4 col-md-4 col-xs-4 titulos" style="text-align:center">IMDB Score:</td>
+                            <td class="detahes" data-bind="text: imdb_score"></td>
+                        </tr>
+                        <tr>
+                            <td class="titulos col-lg-4 col-md-4 col-xs-4 titulos" style="text-align:center">IMDB Link:</td>
+                            <td class="detahes"><a data-bind="attr: { href : movie_imdb_link}, text: movie_imdb_link"></a></td></td>
+                        </tr>
+                        </table>
+                  </div>
+        <div class="col-lg-10 col-md-10 col-xs-12 col-lg-offset-1 col-md-offset-1" style="background-color:lightgrey; border-radius:15px;height:40px;
+             margin-top:30px;margin-bottom:40px; font-size:22px; font-weight:bold; text-align:center; line-height:40px;
+             font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif">
+                            Technical Details
+        </div>
+
+                        <div class="col-lg-10 col-md-10 col-xs-12 col-lg-offset-1 col-md-offset-1">
+                            <table class="table table-striped">
+                                <tbody>
+                                    <tr>
+                                        <td class="titulos col-lg-4 col-md-4 col-xs-4 titulos" style="text-align:center">Color / Black&White:</td>
+                                        <td class="detahes" data-bind="text: (color == null ? 'N/A' : color)"><td />
+                                       
+                                    </tr>
+                                    <tr>
+                                        <td class="titulos col-lg-4 col-md-4 col-xs-4" style="text-align:center">Aspect Ratio:</td>
+                                        <td class="detahes" data-bind="text: (aspect_ratio == null ? 'N/A' : aspect_ratio)">
+                                        <td />
+                                    </tr>
+                                    <tr>
+                                        <td class="titulos col-lg-4 col-md-4 col-xs-4 " style="text-align:center">Budget:</td>
+                                        <td class="detahes" data-bind="text: (budget == null ? 'N/A' : budget+ ' $')"><td/>
+                                    </tr>
+                                    <tr>
+                                        <td class="titulos col-lg-4 col-md-4 col-xs-4 titulos" style="text-align:center">Gross:</td>
+                                        <td class="detahes" data-bind="text: (gross == null ? 'N/A' : gross + '$')">
+                                        <td />
+                                    </tr>
+                                    </tbody>
+                            </table>
+                        </div>
+         <div class="col-lg-10 col-md-10 col-xs-12 col-lg-offset-1 col-md-offset-1" style="background-color:lightgrey; border-radius:15px;height:40px;
+             margin-top:30px;margin-bottom:22px; font-size:22px; font-weight:bold; text-align:center; line-height:40px;
+             font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif">
+                            Reviews and Critics
+                        </div>
+
+                        <div class="col-lg-10 col-md-10 col-xs-12 col-lg-offset-1 col-md-offset-1">
+                            <table class="table table-striped">
+                                <tbody>
+                                    <tr>
+                                        <td class="titulos col-lg-4 col-md-4 col-xs-4 titulos" style="text-align:center">Facebook <i class="fa fa-thumbs-o-up"></i> :</td>
+                                        <td class="detahes col-lg-8" data-bind="text: (movie_facebook_likes ? 'N/A' : movie_facebook_likes)">
+                                    </tr>
+                                    <tr>
+                                        <td class="titulos col-lg-4 col-md-4 col-xs-4" style="text-align:center">Cast Facebook <i class="fa fa-thumbs-o-up"></i> :</td>
+                                        <td class="detahes" data-bind="text: ( cast_total_facebook_likes == null ? 'N/A' : cast_total_facebook_likes)"></td>
+
+                                        
+                                    </tr>
+                                    <tr>
+                                        <td class="titulos col-lg-4 col-md-4 col-xs-4 " style="text-align:center">Voted Users:</td>
+                                        <td class="detahes" data-bind="text: (num_voted_users == null ? 'N/A' : num_voted_users)"></td>
+
+                                    </tr>
+                                    <tr>
+                                        <td class="titulos col-lg-4 col-md-4 col-xs-4 titulos" style="text-align:center">Critics for Reviews:</td>
+                                         <td class="detahes" data-bind="text: (num_critic_for_reviews == null ? 'N/A' : num_critic_for_reviews)"></td>
+                                    </tr>
+                                    <tr>
+                                        <td class="titulos col-lg-4 col-md-4 col-xs-4 titulos" style="text-align:center">Content Rating:</td>
+                                        <td class="detahes" data-bind="text: (content_rating == null ? 'N/A' :content_rating)"></td>
+                                    </tr>
+                            </table>
+                        </div>
+
+</div>
+    </div>
+</section>

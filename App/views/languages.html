@@ -1,0 +1,37 @@
+<style>
+    .background {
+        background: url(background.jpg) no-repeat center center fixed;
+        -webkit-background-size: cover;
+        -moz-background-size: cover;
+        -o-background-size: cover;
+        background-size: cover;
+           }
+</style>
+<section>
+	<div class="page-header">
+		<h2>LanguageService - <small data-bind="visible: (languagesCount() > 0)"><i class="fa fa-film"></i> Languages List [<span data-bind="text: languagesCount"></span> ]</small></h2>
+	</div>
+	<div class="container">
+		<!--este div desaparece quando clicas num ator-->
+		<div id="searchPlace">
+			<div class="row">
+                <div class="col-md-6 col-lg-6 col-md-offset-3  col-lg-offset-3  col-sm-8 col-sm-offset-2 col-xs-10 col-xs-offset-1">
+                    <div class="input-group">
+                        <span class="input-group-addon" id="basic-addon1">Language:</span>
+                        <input type="text" id="languageTitle" class="form-control" data-bind="value : searchText, valueUpdate: 'afterkeydown', event: {keyup: autocomplete}" aria-describedby="basic-addon1" placeholder="Language" />
+                    </div>
+                </div>
+                <div class="col-lg-2 col-md-2 col-sm-6 col-xs-6  col-lg-offset-0 col-md-offset-0 col-sm-offset-5  col-xs-offset-4">
+                    <button class="btn btn-default" id="searchBtn" data-bind="click: searchLanguages, disable : searchTextGood"><i class="fa fa-search"></i></button>
+                    <button class="btn btn-default" id="clearSearchBtn" data-bind="click : clearLanguages"><i class="fa fa-trash-o"></i></button>
+                </div>
+			</div>
+			<hr />
+			<div class="row" data-bind="foreach: languages">
+                <div class="col-lg-4 col-md-4 col-sm-6 col-xs-12">
+                    <div><i class="fa fa-film"></i> <a data-bind="attr: {href: '#languagesDetails/' + languageID}, text: languageName"></a></div>
+                </div>
+			</div>
+		</div>
+	</div>
+</section>

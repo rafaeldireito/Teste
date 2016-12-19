@@ -1,0 +1,66 @@
+<style>
+	.btn-group {
+		width: 100% !important;
+		min-width: 100% !important;
+	}
+	
+	.dropdown-menu {
+		width: 100% !important;
+		min-width: 100% !important;
+	}
+</style>
+<section>
+	<div class="page-header">
+		<h2 style="margin-left:10px; margin-top:10px;">MovieService - <small data-bind="visible: (moviesCount() > 0)"><i class="fa fa-film"></i> Movies List [<span data-bind="text: moviesCount"></span> ]</small></h2>
+	</div>
+	<div class="container-fluid">
+		<div class="col-lg-1" style="margin-top:10px" id="checkGroup">
+			<div class="form-group">
+				<label for="checkbox" class="col-lg-12 control-label" data-bind="text: genresCount"></label>
+				<div class="col-lg-12 checkbox" id="checkbox" data-bind="foreach: genres">
+					<label><input type="checkbox" name="genre" class="checkbox style-2" data-bind="attr: {value: genreID, id: genreName}"/><span data-bind="text: genreName"></span></label>
+					<br />
+				</div>
+			</div>
+		</div>
+		<div class="col-md-10 col-sm-10 col-xs-10">
+			<div class="col-md-8 col-sm-8 col-xs-12">
+				<div class="btn-group" id="drop" style="margin-bottom: 20px;">
+					<button type="button" class="btn btn-default" id="info" data-bind="text: dropCount"></button>
+					<button type="button" class="btn btn-default dropdown-toggle dropdown-toggle-split" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+						<span class="caret"></span>
+					</button>
+					<div class="dropdown-menu" data-bind="foreach: genres">
+						<label class="dropdown-item"><input type="checkbox" data-bind="attr: {value: genreID, id: genreName}"/><span data-bind="text: genreName"></span></label>
+						<div class="dropdown-divider"></div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="col-lg-10">
+			<div class="col-lg-11 col-lg-offset-1 col-md-12 col-xs-12">
+				<div class="row">
+					<div class="col-lg-6 col-lg-offset-2 col-md-8 col-md-offset-2 col-sm-8 col-xs-12 col-xs-offset-0">
+						<div class="input-group" id="searchBar">
+							<span class="input-group-addon" id="basic-addon1">Movie Name:</span>
+							<input type="text" id="movieTitle" class="form-control" data-bind="value : searchText, valueUpdate: 'afterkeydown', event: {keyup: autocomplete}" aria-describedby="basic-addon1" placeholder="Movie name" />
+						</div>
+					</div>
+					<div class="col-lg-2 col-md-2 col-sm-4 col-xs-12">
+						<button class="btn btn-default" id="searchBtn" data-bind="click: searchMovies, disable : searchTextGood"><i class="fa fa-search"></i></button>
+						<button class="btn btn-default" id="clearSearchBtn" data-bind="click : clearMovies"><i class="fa fa-trash-o"></i></button>
+					</div>
+				</div>
+				<hr />
+				<div class="row" data-bind="foreach: movies">
+					<div class="col-lg-4 col-md-4 col-sm-6 col-xs-12" style="height: 400px">
+						<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12" style="height: 100%;">
+							<img data-bind="attr: {src: (poster == '/images/noposter.png' ? 'http://www.kalahandi.info/wp-content/uploads/2016/05/sorry-image-not-available.png' : poster)}" style="height: 90%; width:100%;" />
+							<center><a data-bind="attr: {href: '#moviesDetails/' + movieID}, text: movie_title"></a></center>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</section>

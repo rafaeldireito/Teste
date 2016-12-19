@@ -1,0 +1,53 @@
+<section>
+    <div class="container" data-bind="foreach: languageInfo">
+        <div class="col-lg-12 col-md-12 col-xs-12">
+            <div class="col-lg-10 col-md-10 col-xs-12 col-lg-offset-1 col-md-offset-1" style="background-color:#1C1C1C; border-radius:15px;height:50px;color:white;
+             margin-top:30px;margin-bottom:10px; font-size:22px; font-weight:bold; text-align:center; line-height:50px;
+             font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif"
+                 data-bind="text: languageName">
+            </div>
+            <div class="col-lg-10 col-md-10 col-xs-12 col-lg-offset-1 col-md-offset-1">
+                <br />
+                <div style="margin-top:5px" class="log-lg-12 col-md-12 col-xs-12">
+                    <hr />
+                    <span class="titulos col-lg-4 col-md-4 col-xs-4 " style="margin:0px">Language:</span>
+                    <span class="detahes col-xs-offset-1" data-bind="text: languageName"></span>
+                    <hr />
+                    <span class="titulos col-lg-4 col-md-4 col-xs-4 " style="margin:0px">Movies (nr):</span>
+                    <span class="detahes col-xs-offset-1" data-bind="text: moviesCount"></span>
+                    <hr />
+                    <span class="titulos col-lg-4 col-md-4 col-xs-4">ID:</span>
+                    <span class="detahes col-xs-offset-1" data-bind="text: languageID"></span>
+                    <hr />
+                </div>
+            </div>
+            <div class="col-lg-12 col-md-12 col-xs-12">
+                <div class="col-lg-10 col-md-10 col-xs-12 col-sm-12 col-lg-offset-1 col-md-offset-1" style="background-color:lightgrey; border-radius:15px;height:40px;
+             margin-top:30px;margin-bottom:30px; font-size:20px; font-weight:bold; text-align:center; line-height:40px;
+             font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif">
+                    Language Filmography
+                </div>
+                <div class="col-lg-10 col-md-10 col-xs-12 col-lg-offset-1 col-md-offset-1">
+                    <table class="table table-striped">
+                        <thead>
+                            <tr>
+                                <th class="titulos col-lg-4 col-md-4 col-sm-4 col-xs-4" style="text-align:center">Title</th>
+                                <th class="titulos col-lg-1 col-md-1 col-sm-1 col-xs-1" style="text-align:center">Year</th>
+                                <th class="titulos col-lg-1 col-md-1 col-sm-1 col-xs-1" style="text-align:center">Score</th>
+                                <th class="titulos col-lg-6 col-md-1 col-sm-1 col-xs-1" style="text-align:center">IMDB Link</th>
+
+                            </tr>
+                        </thead>
+                        <tbody data-bind="foreach:movies" class="detahes" style="text-align:center;">
+                            <tr>
+                                <td class="titulos col-lg-4 col-md-4 col-sm-4 col-xs-4" style="text-align:left"><a data-bind="attr: { href : '#moviesdetails/'+movieID}, text: movie_title"></a></td>
+                                <td class="titulos col-lg-1 col-md-1 col-sm-1 col-xs-1" style="text-align:center" data-bind="text: title_year"></td>
+                                <td class="titulos col-lg-1 col-md-1 col-sm-1 col-xs-1" style="text-align:center" data-bind="text: imdb_score"></td>
+                                <td class="titulos col-lg-6 col-md-1 col-sm-1 col-xs-1" style="text-align:center"><a data-bind="attr: { href : movie_imdb_link}, text:'Click Me!'"></a></td>
+                            </tr>
+
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
